@@ -1,0 +1,299 @@
+/*Propiedades Customizables*/
+:root{
+    --plomo: #6E7F80;
+    --negro: #424c50;
+    --naranjo: #ff5c33;
+    --morado: #085c6d;
+    --celeste: #0fbfc5;
+    --turqueza: #00ffff;
+    --azul: #064d54;
+    --turkezoide: #00ffee;
+}
+
+/*Configuracion Especial*/
+html {
+    font-size: 62.5%;   /* Con esto */
+    box-sizing: border-box;
+   
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+body {
+    font-size: 16px;   /* Con esto */
+    font-family: 'Unbounded', cursive;  
+    font-weight: 200;
+    background-image: linear-gradient(to top, var(--negro) 0, var(--plomo) 100%); 
+    
+}                       
+/* Con la configuracion que esta arriba, del html y el body
+provocamos que cada //rem = 10 px// */
+
+/* Codigo Normal */
+h1 {
+    font-size: 3.8rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-weight: 200;
+    font-size: 1.8rem;
+}
+
+h1,h2,h3 {
+    text-align: center;
+}
+
+.sombra {
+    -webkit-box-shadow: 0px 58px 71px 6px rgb(13, 128, 151);
+    -moz-box-shadow: 0px 58px 71px 6px rgb(11, 109, 133);
+    box-shadow: 0px 58px 71px 6px rgb(10, 119, 138);
+    background-image: linear-gradient(to top, var(--azul) 0, var(--morado) 100%);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.titulo span {
+    font-size: 2rem;
+}
+
+.titulo2 {
+    font-weight: 400;
+}
+
+.nav-bg {
+    background-color: var(--morado);
+}
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.boton {
+    background-color: var(--turqueza);
+    color: var(--plomo);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    border-radius: 5%;
+    text-transform: uppercase;
+    text-align: center;
+    width: auto;
+    text-shadow: 0 0 1rem var(--plomo), 0 0 4rem var(--plomo), 0 0 8rem var(--plomo);
+    box-shadow: 0 0 0.1rem var(--turqueza), 0 0 0.5rem var(--turqueza), 0 0 1rem var(--turqueza);
+    border: none;
+
+}
+
+
+.boton:hover {
+    color: var(--turqueza);
+    font-weight: 700;
+    text-shadow: 0 0 1rem var(--turqueza), 0 0 4rem var(--turqueza), 0 0 8rem var(--turqueza);
+    background-color: var(--morado);
+    box-shadow: 0 0 0.1rem var(--morado), 0 0 0.5rem var(--morado), 0 0 1rem var(--morado);
+    transition: 0.5s;
+    transition-delay: 0.1s;
+    cursor: pointer;
+}
+
+.navegacion-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .navegacion-principal {
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+}
+
+.nav-bg:hover {
+    color: var(--turqueza);
+    text-shadow: 0 0 1rem var(--turqueza), 0 0 4rem var(--turqueza), 0 0 8rem var(--turqueza);
+    background-color: var(--morado);
+    box-shadow: 0 0 0.1rem var(--morado), 0 0 0.5rem var(--morado), 0 0 1rem var(--morado);
+    transition: 0.5s;
+    transition-delay: 0.1s;
+}
+
+.navegacion-principal a {
+    color: var(--turqueza);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    text-shadow: 0 0 0.1rem var(--turqueza)
+}
+
+.navegacion-principal a:hover {
+    background-color: var(--morado);
+    color: var(--turkezoide);
+    font-weight: 900;
+    text-shadow: 0 0 1rem var(--turkezoide), 0 0 4rem var(--turkezoide), 0 0 8rem var(--turkezoide);
+    transition: 0.2s;
+    box-shadow: 0 0 1rem var(--turqueza), 0 0 4rem var(--turqueza), 0 0 8rem var(--turqueza);
+    transition: 0.5s;
+    transition-delay: 0.1s;
+    border-radius: 8%;
+    letter-spacing: 0.1rem;
+}
+
+.hero {
+    background-image: url(../imagenes/wqrewqrwqr.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    position: relative;
+    box-shadow: 0 0 0.1rem var(--morado), 0 0 1rem var(--turqueza), 0 0 8rem var(--morado);
+    margin-bottom: 2rem;
+ 
+}
+
+.contenido-hero {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.contenido-hero h2,
+.contenido-hero p {
+    color: var(--turqueza);
+}
+
+.ubicacion {
+    display: flex;
+    align-items: flex-end;
+}
+
+/** Servicios **/
+
+@media (min-width: 768px) {
+    .servicios {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 1rem;
+
+    }
+}
+
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicio h3 {
+    color: var(--turkezoide);
+    font-weight: 700;
+    text-shadow: 0 0 0.1rem var(--turqueza)
+    
+}
+
+.servicio p:hover {
+    color: var(--turqueza);
+    font-weight: 400;
+    text-shadow: 0 0 1rem var(--turqueza), 0 0 4rem var(--turqueza), 0 0 8rem var(--turqueza);
+
+}
+
+.servicio h3:hover {
+    color: var(--turqueza);
+    font-weight: 900;
+    text-shadow: 0 0 1rem var(--turqueza), 0 0 4rem var(--turqueza), 0 0 8rem var(--turqueza);
+}
+
+
+.servicio p {
+    line-height: 2;
+    color: var(--turqueza);
+    text-align: center;
+}
+
+.servicio .iconos {
+    height: 11rem;
+    width: 11rem;
+    background-color: var(--negro);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0.1rem var(--turqueza), 0 0 1rem var(--turqueza), 0 0 8rem var(--turqueza);
+  
+}
+
+.servicio .iconos:hover {
+    background-color: var(--plomo);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0.5rem var(--turkezoide), 0 0 4rem var(--turkezoide), 0 0 16rem var(--turkezoide);
+    transition: 0.5s;
+    transition-delay: 0.1s;
+   
+}
+
+/** Contacto **/
+
+.formulario {
+    background-color: var(--negro);
+    width: min(60rem, 100%); /** Utiliza el valor mas pequeño, se adapta sirve para evitar media queris**/
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.formulario fieldset {
+    border: none;
+    
+}
+
+.formulario legend {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--celeste);
+    text-shadow: 0 0 0.1rem var(--celeste);
+}
+
+.contenedor-campos {
+
+}
+
+.campo {
+    margin-bottom: 1rem;
+}
+
+.campo label {
+    color: var(--turqueza);
+    font-weight: 400;
+    margin-bottom: .5rem;
+    display: block;
+
+}
+
+.inputoide {
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
